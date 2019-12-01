@@ -8,8 +8,13 @@
 
 ```sh
 git clone https://github.com/makseli/falcon-json-schema-validate-path-query.git
+```
+```sh 
 docker-compose up -p json-schema-query-falcon-python
 ```
+Open your browser with -> http://127.0.0.1:3499
+
+-------------
 
 #### Run 
 - Firstly, run ```sh docker-compose up -p json-schema-query-falcon-python```
