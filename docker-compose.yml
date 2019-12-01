@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    image: python:alpine
+  app:
+    ports:
+      - "3499:3499"
+    working_dir: /app
+    volumes:
+      - .:/app
+    build:
+      context: .
+    command: sh -c " pip3 install falcon
+      && pip3 install gunicorn
+      && pip3 install jsonpath2
+      && pip3 install jsonschema
+      && gunicorn -b 0.0.0.0:3499 app:app"
+    depends_on:
+      - web

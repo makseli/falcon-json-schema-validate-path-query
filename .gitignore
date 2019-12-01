@@ -1,0 +1,11 @@
+.idea/
+*.iml
+idea-gitignore.jar
+.gradle
+.DS_Store
+*.pyc
+
+logs
+logs/
+logs/*
+.venv
