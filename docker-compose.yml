@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: python:alpine
+    image: makseli/python-falcon-docker
   app:
     ports:
       - "3499:3499"

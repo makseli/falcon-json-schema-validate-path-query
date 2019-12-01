@@ -9,3 +9,5 @@ logs
 logs/
 logs/*
 .venv
+.project
+.pydevproject
