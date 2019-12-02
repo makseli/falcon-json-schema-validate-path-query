@@ -1,8 +1,10 @@
 version: '3'
 services:
   web:
+    container_name: python-falcon
     image: makseli/python-falcon-docker
   app:
+    container_name: app-json-falcon
     ports:
       - "3499:3499"
     working_dir: /app
@@ -10,9 +12,7 @@ services:
       - .:/app
     build:
       context: .
-    command: sh -c " pip3 install falcon
-      && pip3 install gunicorn
-      && pip3 install jsonpath2
+    command: sh -c " pip3 install jsonpath2
       && pip3 install jsonschema
       && gunicorn -b 0.0.0.0:3499 app:app"
     depends_on:
